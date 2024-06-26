@@ -19,9 +19,14 @@ app.get('/',(req,res) => {
     res.sendFile(path.resolve(__dirname,"frontend", "build" ,"index.html"))
 })
 
+
+
+
+
+
 app.get('/admin',(req,res) => {
-    app.use(express.static(path.resolve(__dirname, "admin", "build")));
-    res.sendFile(path.resolve(__dirname,"admin", "build" ,"index.html"))
+    app.use(express.static(path.resolve(__dirname, "admin", "dist")));
+    res.sendFile(path.resolve(__dirname,"admin", "dist" ,"index.html"))
 })
 
 /// Database connection with mongoDb
